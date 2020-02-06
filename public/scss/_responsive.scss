@@ -1,0 +1,32 @@
+/* Some Components responsive */
+
+@media (max-width: 425px) {
+    .table-rep-plugin{
+        .sticky-table-header.fixed-solution {
+            top: 130px !important;
+        }
+    } 
+    .nav-tabs, .nav-pills{
+        .nav-link{
+            padding: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .mo-mb-2 {
+    margin-bottom: 10px;
+    }
+    
+    .mo-mt-2 {
+    margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-rep-plugin{
+        .sticky-table-header.fixed-solution {
+            top: 160px !important;
+        }
+    } 
+}
