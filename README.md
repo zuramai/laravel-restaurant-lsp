@@ -19,6 +19,21 @@ php artisan storage:link
 php artisan migrate
 php artisan db:seed
 ```
+## Account Demo
+Username: admin
+Password: admin
+
+Username: waiter
+Password: waiter
+
+Username: kasir
+Password: kasir
+
+Username: owner
+Password: owner
+
+Username: pelanggan
+Password: pelanggan
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
