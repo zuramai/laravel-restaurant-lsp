@@ -32,7 +32,6 @@ class OrderController extends Controller
         $order->status_order = "Processing";
         $order->save();
         foreach($request->pesanans as $pesanan) {
-           
             $orderDetail = new OrderDetail;
             $orderDetail->order_id = $order->id;
             $orderDetail->masakan_id = $pesanan['id'];

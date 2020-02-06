@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Masakan;
 use Illuminate\Http\Request;
-
+use Str;
 class MasakanController extends Controller
 {
     /**
@@ -42,14 +42,15 @@ class MasakanController extends Controller
             'harga' => 'required',
             'image' => 'required'
         ]);
-
-        $image = $request->file('image')->storeAs('masakan', $request->name, 'public');
+        $image = $request->file('image');
+        $extension = $image->extension();
+        $image->storeAs('masakan', Str::slug($request->name).'.'.$extension, 'public');
 
         $masakan = new Masakan;
         $masakan->name = $request->name;
         $masakan->harga = $request->harga;
         $masakan->status = true;
-        $masakan->image_name = $request->name;
+        $masakan->image_name = Str::slug($request->name).'.'.$extension;
         $masakan->save();
 
         session()->flash('success','Sukses tambah masakan!');
